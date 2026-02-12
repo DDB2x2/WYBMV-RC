@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Here Comes The Sun 🌿☀️</title>
+  <title>Golden Hour in Cornwall 🐚☀️</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Here Comes The Sun 🌿☀️</h1>
+    <h1>Golden Hour in Cornwall 🐚☀️</h1>
     <p>
       A breath of nature.<br>
       A picnic with a view.<br>
@@ -24,7 +24,7 @@
   const confirmBtn = document.getElementById("confirmBtn");
 
   confirmBtn.addEventListener("click", async () => {
-    const chosenDate = "Twist And Shout 🎶✨";
+    const chosenDate = "Golden Hour in Cornwall 🐚☀️";
 
     // Save locally (optional, but useful)
     localStorage.setItem("selectedDate", chosenDate);
@@ -38,7 +38,7 @@
         },
         body: JSON.stringify({
           selected_date: chosenDate,
-          page: "plan-TAS.html",
+          page: "plan-GHIC.html",
           submitted_at: new Date().toISOString()
         })
       });
