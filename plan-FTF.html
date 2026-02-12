@@ -5,7 +5,7 @@
   <title>From The Future 🎶✨</title>
 
   <style>
-     :root {
+    :root {
       --bg1: #ffd6e7;
       --bg2: #ffeef6;
       --card: #ffffffcc;
@@ -21,16 +21,17 @@
       background: radial-gradient(circle at top, var(--bg2), var(--bg1));
       font-family: system-ui, sans-serif;
       padding: 16px;
-      text-align: center;
     }
 
-   .card {
-  background: white;
-  border-radius: 20px;
-  padding: 25px;
-  margin: 20px 0;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
+    .card {
+      width: min(720px, 92vw);
+      padding: 32px 24px;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 18px 60px rgba(0,0,0,.15);
+    }
 
     .art {
       font-size: 96px;
@@ -46,38 +47,35 @@
       h2 {
       font-size: 27px;
       font-weight: 500;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
+
 p {
   font-size: 1.1em;
   line-height: 1.6;
 }
     
-   .button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 28px;
-    background: #ff3b7a;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1em;
-}
+    .primary-btn {
+      background: var(--yes);
+      color: white;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: 800;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0,0,0,.14);
+    }
 
-.button:hover {
-  background: #ff1f68;
-}
-  .fireworks {
-      width: min(380px, 90vw);
-      margin: 0 auto;
-      display: block;
+    .primary-btn:hover {
+      background: var(--yesHover);
     }
   </style>
-
 </head>
-<body>
-  <div class="container">
 
+<body>
+  <main class="card">
+    <div class="container">
     <div class="card">
     <h1>From The Future 🎶✨</h1>
       <p>
@@ -89,12 +87,9 @@ p {
       Soundtrack:<br>
       Neo-Soul • Rock 'n' Roll • And a little Hip Hop is the goal
     </p>
-     
-    <button id="button" class="button">Confirm</button>
-     </div>
 
-
-  </div>
+    <button class="primary-btn" id="nextBtn">Confirm</button>
+  </main>
 
   <script>
   const button = document.getElementById("button");
@@ -130,6 +125,5 @@ p {
     window.location.href = "save-the-date.html";
   });
 </script>
-  
 </body>
 </html>
