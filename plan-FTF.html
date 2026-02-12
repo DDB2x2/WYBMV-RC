@@ -100,12 +100,12 @@ p {
   </main>
 
   <script>
-  const button = document.getElementById("button");
+  const nextBtn = document.getElementById("nextBtn");
 
-  confirmBtn.addEventListener("click", async () => {
+  nextBtn.addEventListener("click", async () => {
     const chosenDate = "From The Future 🎶✨";
 
-    // Save locally (optional, but useful)
+    // Save locally (optional)
     localStorage.setItem("selectedDate", chosenDate);
 
     try {
@@ -125,13 +125,15 @@ p {
       if (!response.ok) {
         console.error("Formspree submission failed");
       }
+
     } catch (error) {
       console.error("Error submitting form:", error);
     }
 
-    // Navigate ONLY after submission attempt
+    // Always navigate after attempt
     window.location.href = "save-the-date.html";
   });
 </script>
+
 </body>
 </html>
