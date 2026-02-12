@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Countdown ⏰</title>
 
-    <style>
+  <style>
     :root {
       --bg1: #ffd6e7;
       --bg2: #ffeef6;
       --card: #ffffffcc;
       --yes: #ff3b7a;
-      --yesHover: #ff1f68;
     }
 
     body {
@@ -25,7 +25,7 @@
 
     .card {
       width: min(720px, 92vw);
-      padding: 32px 24px;
+      padding: 26px 22px;
       background: var(--card);
       backdrop-filter: blur(10px);
       border-radius: 22px;
@@ -35,49 +35,29 @@
 
     .art {
       font-size: 96px;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
 
     h1 {
       font-size: 44px;
       font-weight: 700;
-      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 2px;
     }
 
       h2 {
-      font-size: 27px;
-      font-weight: 500;
-      margin-bottom: 40px;
+      font-size: 25px;
+      font-weight: 300;
+      margin-top: 2px;
+      margin-bottom: 20px;
     }
 
-p {
-  font-size: 1.1em;
-  line-height: 1.6;
-}
+      p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      font-style: italic;
+    }
     
-    .primary-btn {
-      background: var(--yes);
-      color: white;
-      padding: 16px 32px;
-      font-size: 18px;
-      font-weight: 800;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 10px 24px rgba(0,0,0,.14);
-      margin-top: 20px;
-    }
-
-    .primary-btn:hover {
-      background: var(--yesHover);
-    }
-
-    .card-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
 .countdown {
   margin-top: 40px;
   font-size: 22px;
@@ -110,18 +90,15 @@ p {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-    .art {
-      font-size: 96px;
-      margin-bottom: 10px;
-    }
-
+    
   </style>
 </head>
+
 <body>
   <main class="card">
-   <div class="art">⏰</div>
+    <div class="art">⏰</div>
 
-    <h1>…We needed a new way to count down?</h1>
+    <h1>...We needed a new way to count down?</h1>
 
     <div class="countdown">
       <div class="date-label" id="dateLabel">Thursday 19-Feb</div>
@@ -130,10 +107,11 @@ p {
 
     
     <!-- HINT -->
-    <div class="hint" id="hint"> We’re all travelling through time together every day of our lives. All we can do is do our best to relish this remarkable ride </div>
-      </main>
+    <div class="hint" id="hint">"We’re all travelling through time together every day of our lives. All we can do is do our best to relish this remarkable ride."</div>
+    
+  </main>
 
-<script>
+  <script>
     const targetDate = new Date("February 19, 2026 00:00:00").getTime();
     const dateLabelEl = document.getElementById("dateLabel");
     const timeRemainingEl = document.getElementById("timeRemaining");
@@ -168,10 +146,7 @@ p {
     setInterval(updateCountdown, 60000);
 
      const hint = document.getElementById("hint");
-        
-  </main>
-
-  <script>
-</script>
+    
+  </script>
 </body>
 </html>
