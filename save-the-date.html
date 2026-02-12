@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Save the Date 📆</title>
 
-  <style>
+    <style>
     :root {
       --bg1: #ffd6e7;
       --bg2: #ffeef6;
@@ -39,23 +39,22 @@
     }
 
     h1 {
-      font-size: 28px;
-      font-weight: 500;
-      margin-top: 10px;
-      margin-bottom: 2px;
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 0px;
     }
 
       h2 {
-      font-size: 20px;
-      font-weight: 300;
-      margin-top: 2px;
-      margin-bottom: 20px;
+      font-size: 27px;
+      font-weight: 500;
+      margin-bottom: 40px;
     }
 
-      p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+    
     .primary-btn {
       background: var(--yes);
       color: white;
@@ -66,19 +65,27 @@
       border: none;
       cursor: pointer;
       box-shadow: 0 10px 24px rgba(0,0,0,.14);
+      margin-top: 20px;
     }
 
     .primary-btn:hover {
       background: var(--yesHover);
     }
+
+    .card-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
   </style>
 </head>
-
 <body>
   <main class="card">
-    <div class="art">📆</div>
-    <h1>Selection Noted - Save The Date:</h1><br>
-    <h2>Monday 2nd March</h2>
+       <div class="art">📆</div>
+    <p>Selection Noted. </p> <br>
+<h1> Save The Date:</h1><br>
+    <h2>Monday 2nd March</h2> <br>
 
     <button class="primary-btn" id="nextBtn">P.S...</button>
   </main>
@@ -86,7 +93,11 @@
   <script>
     document.getElementById("nextBtn").addEventListener("click", () => {
       window.location.href = "countdown.html";
-    });
-  </script>
+    });>
+    
+  </main>
+
+  <script>
+</script>
 </body>
 </html>
