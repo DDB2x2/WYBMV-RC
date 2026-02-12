@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New Memories 💌</title>
+
+  <style>
+    :root {
+      --bg1: #ffd6e7;
+      --bg2: #ffeef6;
+      --card: #ffffffcc;
+      --yes: #ff3b7a;
+      --yesHover: #ff1f68;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at top, var(--bg2), var(--bg1));
+      font-family: system-ui, sans-serif;
+      padding: 16px;
+    }
+
+    .card {
+      width: min(720px, 92vw);
+      padding: 32px 24px;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 18px 60px rgba(0,0,0,.15);
+    }
+
+    .art {
+      font-size: 96px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 0px;
+    }
+
+      h2 {
+      font-size: 27px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    .primary-btn {
+      background: var(--yes);
+      color: white;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: 800;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0,0,0,.14);
+    }
+
+    .primary-btn:hover {
+      background: var(--yesHover);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="art">💌</div>
+    <button class="primary-btn" id="nextBtn">Ready to make new memories together?</button>
+  </main>
+
+  <script>
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      window.location.href = "choose-the-date.html";
+    });
+  </script>
+</body>
+</html>
