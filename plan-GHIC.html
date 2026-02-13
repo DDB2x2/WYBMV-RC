@@ -98,13 +98,12 @@ p {
     
   </main>
 
-  <script>
-  const button = document.getElementById("button");
+ <script>
+  const nextBtn = document.getElementById("nextBtn");
 
-  confirmBtn.addEventListener("click", async () => {
-    const chosenDate = " Golden Hour in Cornwall 🐚☀️";
+  nextBtn.addEventListener("click", async () => {
+    const chosenDate = "Golden Hour in Cornwall 🐚☀️";
 
-    // Save locally (optional, but useful)
     localStorage.setItem("selectedDate", chosenDate);
 
     try {
@@ -116,7 +115,7 @@ p {
         },
         body: JSON.stringify({
           selected_date: chosenDate,
-          page: "plan-FTF.html",
+          page: "plan-GHIC.html",
           submitted_at: new Date().toISOString()
         })
       });
@@ -124,13 +123,14 @@ p {
       if (!response.ok) {
         console.error("Formspree submission failed");
       }
+
     } catch (error) {
       console.error("Error submitting form:", error);
     }
 
-    // Navigate ONLY after submission attempt
     window.location.href = "save-the-date.html";
   });
 </script>
+
 </body>
 </html>
