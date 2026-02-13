@@ -123,7 +123,6 @@
       if (diff <= 0) {
         dateLabelEl.textContent = "Thursday 19-Feb";
         timeRemainingEl.textContent = "It’s About Time! 💘";
-
         return;
       }
 
@@ -134,19 +133,23 @@
       const minutes = Math.floor(
         (diff % (1000 * 60 * 60)) / (1000 * 60)
       );
+      const seconds = Math.floor(
+        (diff % (1000 * 60)) / 1000
+      );
 
       dateLabelEl.textContent = "Thursday 19-Feb";
 
       timeRemainingEl.textContent =
-      `${days} days · ${hours} hours · ${minutes} minutes`;
+      `${days} days · ${hours} hours · ${minutes} minutes · ${seconds} seconds`;
 
     }
 
     updateCountdown();
-    setInterval(updateCountdown, 60000);
+    setInterval(updateCountdown, 1000);
 
-     const hint = document.getElementById("hint");
+    const hint = document.getElementById("hint");
     
-  </script>
+</script>
+
 </body>
 </html>
